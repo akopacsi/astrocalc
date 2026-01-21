@@ -1,0 +1,12 @@
+{
+    "location": {
+        "latitude": 47.5000,
+        "longitude": 19.0000,
+        "elevation_m": 100
+    },
+    "time_range": {
+        "start": "1901-01-01T00:00:00Z",
+        "end": "2101-01-01T00:00:00Z"
+    },
+    "ephemeris_file": "de440.bsp"
+}
