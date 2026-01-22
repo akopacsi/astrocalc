@@ -2,7 +2,7 @@
 
 A professional-grade astronomical almanac generator written in Python. This tool calculates precise astronomical events, planetary phenomena, and generates detailed daily ephemeris calendars.
 
-It was designed to match the precision of printed astronomical almanacs, taking into account observer location, timezone, and visual magnitude.
+It was designed to match the precision of printed astronomical almanacs, using high-precision ephemeris data and specific observer location. **All time outputs are in Coordinated Universal Time (UTC).**
 
 ## 🚀 Features & Calculation Criteria
 
@@ -51,7 +51,7 @@ Generates a chronological list of major astronomical phenomena for a time range.
 * **Planet & Planet:** Detects close approaches where separation is **< 3.0°**.
 
 ### 2. Daily Calendar Grid (`daily_calendar.csv`)
-Generates a dense daily data grid ideal for printing or planning observations.
+Generates a dense daily data grid ideal for printing or planning observations. Times are in **UTC**.
 
 * **Sun:** Sunrise, Sunset, **Upper Meridian Transit (Noon)**, Altitude at Transit, and Equation of Time.
 * **Moon:** Moonrise, Transit, Moonset, and daily Phase status.
@@ -80,19 +80,18 @@ Generates a dense daily data grid ideal for printing or planning observations.
 
 Open `config.json` to set your observer location and time range.
 
-Example for Hungary (CET):
+Example for Hungary (Coordinates only, times are UTC):
 ```json
 {
     "location": {
-        "latitude": 47.5,
-        "longitude": 19.0,
-        "elevation_m": 0
+        "latitude": 47.5000,
+        "longitude": 19.0000,
+        "elevation_m": 100
     },
     "time_range": {
-        "start": "2024-01-01",
-        "end": "2024-12-31"
+        "start": "2024-01-01T00:00:00Z",
+        "end": "2024-12-31T00:00:00Z"
     },
-    "timezone_offset": 1.0,
     "ephemeris_file": "de440.bsp"
 }
 ```
