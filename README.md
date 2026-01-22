@@ -2,16 +2,16 @@
 
 A professional-grade astronomical almanac generator written in Python. This tool calculates precise astronomical events, planetary phenomena, and generates detailed daily ephemeris calendars.
 
-It was designed to match the precision of printed astronomical almanacs (like the Hungarian Astronomical Almanac), taking into account observer location, timezone, and visual magnitude.
+It was designed to match the precision of printed astronomical almanacs, taking into account observer location, timezone, and visual magnitude.
 
 ## 🚀 Features & Calculation Criteria
 
 ### 1. Master Event List (`astrocalc.csv`)
-Generates a chronological list of major astronomical phenomena for a given year.
+Generates a chronological list of major astronomical phenomena for a time range.
 
 #### 🌍 Earth & Seasons
-* **Seasons:** Calculates precise times for March/September Equinoxes and June/December Solstices using geocentric apparent ecliptic longitude.
 * **Apsides:** Calculates **Perihelion** (closest to Sun) and **Aphelion** (farthest) using precise velocity-vector flip detection.
+* **Seasons:** Calculates precise times for March/September Equinoxes and June/December Solstices using geocentric apparent ecliptic longitude.
 
 #### 🌙 Moon Phenomena
 * **Phases:** Standard New Moon, First Quarter, Full Moon, and Last Quarter.
@@ -51,10 +51,10 @@ Generates a chronological list of major astronomical phenomena for a given year.
 * **Planet & Planet:** Detects close approaches where separation is **< 3.0°**.
 
 ### 2. Daily Calendar Grid (`daily_calendar.csv`)
-Generates a dense daily data grid ideal for printing or planning observations, adjusted for your local timezone (e.g., UTC+1).
+Generates a dense daily data grid ideal for printing or planning observations.
 
 * **Sun:** Sunrise, Sunset, **Upper Meridian Transit (Noon)**, Altitude at Transit, and Equation of Time.
-* **Moon:** Moonrise, Moonset, Transit, and daily Phase status.
+* **Moon:** Moonrise, Transit, Moonset, and daily Phase status.
 * **Time Standards:**
     * **Julian Date:** Terrestrial Time (TT) at 12:00 UTC.
     * **Sidereal Time:** Greenwich Apparent Sidereal Time (GAST) at 00:00 UTC.
