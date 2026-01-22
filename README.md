@@ -95,6 +95,7 @@ Example for Hungary (CET):
     "timezone_offset": 1.0,
     "ephemeris_file": "de440.bsp"
 }
+```
 
 ## Copyright (c) 2026 Antal Kopácsi
 
